@@ -1,0 +1,16 @@
+:host {
+  padding: 10px;
+}
+
+.detected-elms {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  padding: 5px;
+  border: 2px solid green;
+  background-color: white;
+}
+
+.content {
+  color: red;
+}
