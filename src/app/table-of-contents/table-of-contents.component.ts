@@ -31,7 +31,6 @@ export class TableOfContentsComponent implements OnInit {
         this.detectedElms = detectedElms;
       }
     });
-    console.log('dd', this.detectedElms);
   }
   constructor(private renderer: Renderer2) {
     this.renderer.listen('window', 'resize', this.detectElms.bind(this));
