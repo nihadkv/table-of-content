@@ -1,5 +1,6 @@
 import {
   Component,
+  Input,
   OnInit,
   QueryList,
   Renderer2,
@@ -14,15 +15,10 @@ import {
 export class TableOfContentsComponent implements OnInit {
   @ViewChildren('overview, section1, section2, section3, section4, section5')
   elms!: QueryList<any>;
-  detectedElms: any = [];
-  contents = [
-    'overview',
-    'section1',
-    'section2',
-    'section3',
-    'section4',
-    'section5',
-  ];
+  @Input()
+  contents: any;
+  @Input() detectedElms: any;
+
   detectElms() {
     const detectedElms: any = [];
     this.elms.forEach((elm, index) => {
